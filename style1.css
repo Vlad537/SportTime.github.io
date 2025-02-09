@@ -1,0 +1,300 @@
+/* style1.css */
+
+html {
+  overflow-x: hidden;
+}
+body {
+  margin: 0;
+
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #eaddd3;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+/* -----------Хедер --------------------*/
+.header {
+  background-color: #796254;
+  height: 300px;
+  position: relative;
+  width: 100%;
+  max-width: 100vw; /* Не дозволяє виходити за ширину вікна */
+  overflow: hidden;
+}
+
+.header-bg {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: none; /* Видаляємо зсув */
+}
+
+.header-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Інформація про ресторан */
+.restaurant-info {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+  max-width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-50%);
+  margin-bottom: 5px;
+}
+
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.restaurant-details h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.restaurant-details p {
+  margin: 5px 0 0;
+  color: gray;
+  font-size: 14px;
+}
+
+/* Основний контент */
+.content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+/* Розділи меню */
+.menu-sections {
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 48%;
+  margin: 20px;
+}
+
+.menu-sections h2 {
+  margin-top: 0;
+}
+
+.menu-sections ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Відстань між кнопками */
+}
+
+.menu-sections li {
+  width: 100%; /* Встановлюємо ширину елементів списку */
+}
+
+.menu-sections a {
+  display: block; /* Дозволяє кнопкам займати весь простір */
+  text-align: left; /* Вирівнювання тексту по центру */
+  padding: 18px 15px;
+  border: 2px solid grey;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #352a28;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  width: 100%; /* Ширина кнопки дорівнює ширині батьківського контейнера */
+  box-sizing: border-box; /* Ураховує padding у ширині */
+}
+
+.menu-sections a:hover {
+  background-color: #c4b6ab;
+  color: white;
+}
+
+/* Про заклад */
+.about-restaurant {
+  background-color: white;
+  border-radius: 30px;
+  padding: 20px;
+  margin: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 48%;
+}
+
+.about-restaurant h2 {
+  margin-top: 0;
+}
+
+.about-restaurant ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about-restaurant li {
+  margin-bottom: 15px;
+}
+
+.about-restaurant p {
+  margin: 15px 0;
+}
+
+.about-restaurant a {
+}
+@media (max-width: 786px) {
+  /* Для планшетів і великих телефонів */
+  .container {
+    width: 100%;
+    padding: 10px 0 10px 0;
+  }
+
+  .header {
+    height: 220px;
+  }
+
+  .header-bg img {
+    max-height: 140px;
+  }
+
+  .restaurant-info {
+    width: 90%;
+    padding: 15px;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .menu-sections,
+  .about-restaurant {
+    width: 90%;
+    padding: 18px;
+  }
+
+  .menu-sections a {
+    font-size: 15px;
+    padding: 14px;
+  }
+}
+@media (max-width: 480px) {
+  /* Для стандартних телефонів */
+  .container {
+    width: 100%;
+    padding: 10px 0 10px 0;
+  }
+
+  .header {
+    height: 170px;
+  }
+
+  .header-bg img {
+    max-height: 110px;
+  }
+
+  .restaurant-info {
+    width: 92%;
+    padding: 12px;
+  }
+
+  .menu-sections,
+  .about-restaurant {
+    width: 92%;
+    padding: 14px;
+  }
+
+  .menu-sections a {
+    font-size: 13px;
+    padding: 11px;
+  }
+}
+@media (max-width: 576px) {
+  /* Для маленьких телефонів */
+  .container {
+    width: 100%;
+    padding: 10px 0 10px 0;
+  }
+
+  /* Хедер */
+  .header {
+    height: 180px;
+  }
+
+  .header-bg img {
+    max-height: 120px;
+  }
+
+  /* Інформація про ресторан */
+  .restaurant-info {
+    width: 90%;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .restaurant-details h1 {
+    font-size: 20px;
+  }
+
+  .restaurant-details p {
+    font-size: 12px;
+  }
+
+  /* Карточки меню */
+  .menu-sections,
+  .about-restaurant {
+    width: 90%;
+    margin: 10px auto;
+    padding: 15px;
+    border-radius: 20px;
+  }
+
+  .menu-sections a {
+    font-size: 14px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  /* Для дуже маленьких екранів */
+  .header {
+    height: 150px;
+  }
+
+  .header-bg img {
+    max-height: 100px;
+  }
+
+  .restaurant-info {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .menu-sections,
+  .about-restaurant {
+    width: 95%;
+    padding: 12px;
+  }
+
+  .menu-sections a {
+    font-size: 12px;
+    padding: 10px;
+  }
+}
